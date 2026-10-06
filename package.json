@@ -1,0 +1,16 @@
+{
+  "name": "azures-basement-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Azure's Basement Discord community portal",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo Static site ready for Netlify"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}

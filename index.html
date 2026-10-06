@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b10" />
+  <meta name="description" content="Azure's Basement — the official Discord community portal." />
+  <title>Azure's Basement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">A</span>
+      <span>AZURE'S BASEMENT</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#announcements">Announcements</a>
+      <a href="#rules">Rules</a>
+    </nav>
+    <div id="authArea">
+      <button class="btn btn-discord" id="loginBtn">Sign in with Discord</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> COMMUNITY PORTAL</div>
+        <h1>Welcome to<br><span>Azure's Basement.</span></h1>
+        <p class="hero-text">Your home for server updates, community perks, giveaways, and everything happening inside the Basement.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="heroLogin">Sign in with Discord <span>↗</span></button>
+          <a class="btn btn-ghost" href="#announcements">Explore server <span>↓</span></a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="orb"></div>
+        <div class="card-top"><span>AZURE'S BASEMENT</span><span>LIVE</span></div>
+        <div class="server-symbol">A</div>
+        <div class="server-name">The Basement</div>
+        <div class="server-meta"><span class="pulse"></span><span id="memberStatus">Discord community</span></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong id="memberCount">—</strong><span>Members</span></div>
+      <div><strong id="onlineCount">—</strong><span>Online</span></div>
+      <div><strong id="roleCount">—</strong><span>Your roles</span></div>
+      <div><strong id="vipCount">0</strong><span>VIP giveaways</span></div>
+    </section>
+
+    <section class="section" id="announcements">
+      <div class="section-heading">
+        <div><div class="eyebrow">LATEST</div><h2>Announcements</h2></div>
+        <span class="section-note">From the server</span>
+      </div>
+      <div id="announcementsGrid" class="announcement-grid">
+        <div class="skeleton large"></div><div class="skeleton large"></div>
+      </div>
+    </section>
+
+    <section class="section split" id="account">
+      <div>
+        <div class="eyebrow">MEMBERS AREA</div>
+        <h2>Your Basement pass</h2>
+        <p class="muted">Sign in to link your Discord account, see your server roles, and unlock member-only actions.</p>
+      </div>
+      <div class="account-panel" id="accountPanel">
+        <div class="locked-icon">◈</div>
+        <div><strong>Discord account not linked</strong><span>Sign in to see your profile and roles.</span></div>
+        <button class="btn btn-primary small" id="accountLogin">Sign in</button>
+      </div>
+    </section>
+
+    <section class="section vip-section">
+      <div class="vip-card">
+        <div>
+          <div class="eyebrow">MEMBER REWARD</div>
+          <h2>Claim VIP Giveaway</h2>
+          <p>VIP drops are distributed through the Basement. Sign in and claim when a giveaway is live.</p>
+        </div>
+        <div class="vip-action">
+          <div class="claim-number" id="claimNumber">0</div>
+          <span>available</span>
+          <button class="btn btn-primary" id="claimBtn">Claim VIP</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rules">
+      <div class="section-heading">
+        <div><div class="eyebrow">HOUSE RULES</div><h2>Keep the Basement good.</h2></div>
+      </div>
+      <div id="rulesGrid" class="rules-grid">
+        <div class="rule"><span>01</span><div><h3>Respect people</h3><p>Keep conversations welcoming. No harassment, hate, or targeted abuse.</p></div></div>
+        <div class="rule"><span>02</span><div><h3>Use the right channels</h3><p>Keep topics where they belong and follow channel-specific guidance.</p></div></div>
+        <div class="rule"><span>03</span><div><h3>No spam or exploits</h3><p>Don't spam, scam, exploit bugs, or abuse bots and server systems.</p></div></div>
+        <div class="rule"><span>04</span><div><h3>Listen to staff</h3><p>Moderation decisions are there to keep the community safe and enjoyable.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">A</span><span>AZURE'S BASEMENT</span></div>
+    <span>Built for the community.</span>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
